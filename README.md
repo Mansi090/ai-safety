@@ -50,37 +50,48 @@ npm install
 npm start 
 
 ```
+## Running Locally
 
 The app will run locally at:
 
+
 http://localhost:3000
+
+
 Any changes you make will automatically reload in the browser.
 
-Key Features
-Incident Reporting: Easily report AI safety incidents with details.
+---
 
-Incident Dashboard: View, filter, and manage incidents.
+## Key Features
 
-Dark Mode: Toggle between light and dark themes.
+- **Incident Reporting**: Easily report AI safety incidents with detailed information.
+- **Incident Dashboard**: View, filter, and manage reported incidents.
+- **Dark Mode**: Seamlessly toggle between light and dark themes.
+- **Dynamic Navigation**: Sidebar navigation dynamically updates based on the current page.
+- **Fuzzy Search**: Quickly search incidents with typo-tolerance using Fuse.js.
+- **Custom Tags & Filtering**: Organize and filter incidents using custom tags.
+- **Analytics Dashboard**: Visualize incident data using charts and graphs.
 
-Dynamic Navigation: Sidebar navigation updates based on the page.
+---
 
-Fuzzy Search: Quickly search incidents with typo-tolerance.
+## Design Decisions and Challenges
 
-Custom Tags & Filtering: Organize incidents using custom tags.
+- **Design Simplicity**:  
+  Chose **Tailwind CSS** for rapid prototyping and maintaining a clean, minimal UI.
+  
+- **Dynamic Routing**:  
+  Used **React Router** to enable smooth page-based navigation (Dashboard vs Add Incident).
 
-Analytics: Visualize incident data using charts and graphs.
+- **Search Optimization**:  
+  Integrated **Fuse.js** to allow fuzzy search, improving the search experience without requiring exact matches.
 
+- **State Management**:  
+  Managed local state with **React's built-in hooks** to keep the project lightweight. (No Redux used unless needed for future scaling.)
 
-Design Decisions and Challenges
-Design Simplicity: Chose Tailwind CSS for rapid prototyping and maintaining a clean, minimal UI.
+- **Responsive Layout**:  
+  Designed mobile-friendly layouts using **Tailwind’s responsive utilities** to ensure accessibility across devices.
 
-Dynamic Routing: Used React Router to enable page-based navigation (Dashboard vs Add Incident).
+- **Challenge**:  
+  Integrating real-time search highlighting and advanced tag-based filtering required careful optimization to avoid UI lag with larger datasets.
 
-Search Optimization: Integrated Fuse.js to allow fuzzy search for a better user experience without requiring exact matches.
-
-State Management: Managed local state with React's built-in hooks to keep the project lightweight (avoided Redux unless scaling is needed).
-
-Responsive Layout: Designed mobile-friendly layouts using Tailwind’s responsive utilities.
-
-Challenge: Integrating real-time search highlighting and advanced tag-based filtering required careful optimization to avoid UI lag with larger datasets.
+---
