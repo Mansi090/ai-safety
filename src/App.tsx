@@ -110,7 +110,7 @@ const App = () => {
 							</svg>
 						</div>
 						<h1 className='text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400'>
-							AI Safety Sentinel
+							AI Safety dashboard  
 						</h1>
 					</div>
 
